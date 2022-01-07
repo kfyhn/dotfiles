@@ -9,4 +9,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [/bin/bash -c "NONINTERACTIVE=1; $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Install Homebrew for easier development installations]
+  - command: /bin/bash -c "NONINTERACTIVE=1; $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    description: Install Homebrew for easier development installations
+    stdout: true
+    stderr: true
