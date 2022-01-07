@@ -9,3 +9,22 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - command: |
+      rm -rf ~/.linuxbrew
+      git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew 
+      mkdir ~/.linuxbrew/bin 
+      ln -s ../Homebrew/bin/brew ~/.linuxbrew/bin 
+      eval $(~/.linuxbrew/bin/brew shellenv)
+      test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+      test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+      test -r ~/.bash_profile && echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.bash_profile
+      echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >>~/.profile
+    description: Install Homebrew for easier development installations
+    stdout: true
+    stderr: true
+ 
+- tap:
+    - jandedobbeleer/oh-my-posh
+
+- brew:
+    - oh-my-posh
