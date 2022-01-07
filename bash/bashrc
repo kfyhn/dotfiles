@@ -1,0 +1,20 @@
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+_fzf_complete_git() {
+    ARGS="$@"
+    if [[ $ARGS == 'git add'* || $ARGS == 'git checkout'* ]]; then
+        _fzf_complete "--reverse --multi" "$@" < <(
+            git status --short
+        )
+    else
+        eval "zle ${fzf_default_completion:-expand-or-complete}"
+    fi
+}
+_fzf_complete_git_post() {
+  sed -e 's/^ *[A-Z?]* //g'
+}
+
+# Setup Linuxbrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+. ~/.z_repo/z.sh # https://github.com/rupa/z / Gives the 'z' command which improves upon the 'cd' command
