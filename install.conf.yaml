@@ -7,7 +7,9 @@
 - link:
     ~/.vimrc: vim/vimrc
     ~/.bashrc_extra: bash/bashrc
+    ~/.Brewfile: Brewfile
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - [echo 'source ~/.bashrc_extra' >> ~/.bashrc]
+  - [brew bundle --file ~/.Brewfile]
