@@ -6,10 +6,8 @@
 
 - link:
     ~/.vimrc: vim/vimrc
+    ~/.bashrc_extra: bash/bashrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - command: /bin/bash -c "NONINTERACTIVE=1; $(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    description: Install Homebrew for easier development installations
-    stdout: true
-    stderr: true
+  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc]
