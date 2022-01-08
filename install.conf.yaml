@@ -14,7 +14,7 @@
   - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && source ~/.bashrc, Adding extra bashrc to user bashrc]
   - command: |
       /home/linuxbrew/.linuxbrew/bin/brew bundle --file ~/.Brewfile
-      cp $(home/linuxbrew/.linuxbrew/bin/brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json ~/.jandedobbeleer.omp.json
+      cp $(/home/linuxbrew/.linuxbrew/bin/brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json ~/.jandedobbeleer.omp.json
     description: Installing extra development tools with Homebrew
     stdout: true
     stderr: true
