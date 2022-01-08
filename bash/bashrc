@@ -17,4 +17,7 @@ _fzf_complete_git_post() {
 # Setup Linuxbrew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# Setup Oh-my-Posh
+eval "$(oh-my-posh --init --shell bash --config ~/jandedobbeleer.omp.json)"
+
 . ~/.z_repo/z.sh # https://github.com/rupa/z / Gives the 'z' command which improves upon the 'cd' command
