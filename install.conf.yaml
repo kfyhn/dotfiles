@@ -14,7 +14,7 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && source ~/.bashrc, Adding extra bashrc to user bashrc]
+  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && /bin/bash -c source ~/.bashrc, Adding extra bashrc to user bashrc]
   - [git clone https://github.com/rupa/z.git ~/.z_repo, Installing z]
   - command: |
       /home/linuxbrew/.linuxbrew/bin/brew install fzf
