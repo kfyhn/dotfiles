@@ -11,5 +11,8 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc]
-  - [brew bundle --file ~/.Brewfile]
+  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc, Adding extra bashrc to user bashrc]
+  - command: brew bundle --file ~/.Brewfile
+    description: Installing extra development tools with Homebrew
+    stdout: true
+    stderr: true
