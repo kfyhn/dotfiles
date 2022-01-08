@@ -14,7 +14,6 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && /bin/bash -c 'source ~/.bashrc', Adding extra bashrc to user bashrc]
   - [git clone https://github.com/rupa/z.git ~/.z_repo, Installing z]
   - command: |
       /home/linuxbrew/.linuxbrew/bin/brew install fzf
@@ -24,3 +23,4 @@
       /home/linuxbrew/.linuxbrew/bin/brew bundle --file ~/.Brewfile
       cp $(/home/linuxbrew/.linuxbrew/bin/brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json ~/.jandedobbeleer.omp.json
     description: Installing extra development tools with Homebrew
+  - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && /bin/bash -c 'source ~/.bashrc', Adding extra bashrc to user bashrc]
