@@ -17,7 +17,7 @@
   - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && source ~/.bashrc, Adding extra bashrc to user bashrc]
   - [git clone https://github.com/rupa/z.git ~/.z_repo, Installing z]
   - command: |
-      brew install fzf
+      /home/linuxbrew/.linuxbrew/bin/brew install fzf
       $(/home/linuxbrew/.linuxbrew/bin/brew --prefix)/opt/fzf/install
     description: Install fzf
   - command: |
