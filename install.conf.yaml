@@ -24,3 +24,4 @@
       cp $(/home/linuxbrew/.linuxbrew/bin/brew --prefix oh-my-posh)/themes/jandedobbeleer.omp.json ~/.jandedobbeleer.omp.json
     description: Installing extra development tools with Homebrew
   - [echo 'source ~/.bashrc_extra' >> ~/.bashrc && /bin/bash -c 'source ~/.bashrc', Adding extra bashrc to user bashrc]
+  - [curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash, Setup git auto-completion]

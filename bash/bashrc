@@ -21,3 +21,8 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(oh-my-posh --init --shell bash --config ~/.jandedobbeleer.omp.json)"
 
 . ~/.z_repo/z.sh # https://github.com/rupa/z / Gives the 'z' command which improves upon the 'cd' command
+
+# Setup git auto-complete
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
